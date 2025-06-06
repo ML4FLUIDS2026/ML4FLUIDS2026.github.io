@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang='en'>
 
 <head>
@@ -34,7 +34,7 @@
                 <a title="Conference Home Page" href=".">Home</a>
             </td>
             <td class="navigation">
-                <a class="current" title="Register for the Conference" href="registration">Registration</a>
+                <a title="Register for the Conference" href="registration">Registration</a>
             </td>
             <td class="navigation">
                 <a title="Conference Program" href="program">Program</a> 
@@ -43,25 +43,11 @@
                 <a title="Directions to the Conference" href="directions">Directions</a>
             </td>
             <td class="navigation">
-                <a title="Challenges" href="challenges">Challenges</a>
+                <a class="current" title="Challenges" href="challenges">Challenges</a>
             </td>
         </tr>
     </table>
 
-    <br>
-
-    <p>
-        Link to ERCOFTAC registration.
-    </p>
-    <!--
-    <iframe class="registration" src="EMBED LINK FOR GOOGLE FORM HERE"></iframe>
-    -->
-
-    <footer>
-        &copy; Conference Organizers
-        &nbsp;|&nbsp; Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
-    </footer>
-
 </body>
-</html>
 
+</html>
