@@ -9,11 +9,51 @@
     <meta name="resource-type" content="document">
     <meta name="distribution" content="global">
     <meta name="KeyWords" content="ERCOFTAC, machine learning, fluid dynamics, CWI Amsterdam">
-    <!-- This is supposed to speed up loading pushed changes in live website -->
     <meta http-equiv='cache-control' content='no-cache'> 
-	 <meta http-equiv='expires' content='0'> 
-	 <meta http-equiv='pragma' content='no-cache'>
+    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='pragma' content='no-cache'>
     <title>ERCOFTAC ML4FLUIDS 2026</title>
+
+    <style>
+        .challenge-section {
+            max-width: 800px;
+            margin: 0 auto 3em auto;
+            line-height: 1.6;
+        }
+
+        .challenge-section h2 {
+            color: #702f3b;
+            margin-top: 1.5em;
+        }
+
+        .dates-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid #702f3b;
+            padding: 1em 1.5em;
+            margin: 1.5em 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            margin-top: 1em;
+            font-size: 0.95em;
+        }
+
+        main > h2 {
+            text-align: center;
+            color: #702f3b;
+        }
+
+        main > p {
+            max-width: 800px;
+            margin: 0 auto 2em auto;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,7 +61,7 @@
     <div class="banner">
         <img src="assets/banner.jpg" alt="Conference Banner">
         <div class="top-left">
-            <span class="title2"> Machine learning for fluid dynamics </span> <!--<span class="year">2026</span>-->
+            <span class="title2"> Machine learning for fluid dynamics </span>
         </div>
         <div class="bottom-right">
             4-6 March 2026 <br> CWI Amsterdam
@@ -35,15 +75,15 @@
             </td>
             <td class="navigation">
                 <a title="Register for the Conference" href="registration">Registration</a>
+            </td>
             <td class="navigation">
                 <a title="Abstracts" href="abstracts">Abstracts</a>
-            </td>
             </td>
             <td class="navigation">
                 <a title="Conference Program" href="program">Program</a> 
             </td>
             <td class="navigation">
-                <a title="Directions to the Conference" href="directions"> Venue/hotels </a>
+                <a title="Directions to the Conference" href="directions">Venue/hotels</a>
             </td>
             <td class="navigation">
                 <a class="current" title="Challenges" href="challenges">Challenges</a>
@@ -60,20 +100,20 @@
             <h2>AI Surrogate Challenge</h2>
             <p>The AI Surrogate Challenge focuses on neural operators, Physics-Informed Neural Networks (PINNs), and direct ML prediction approaches for fluid dynamics applications. This challenge is directly affiliated with the ML4Fluids conference and aims to benchmark state-of-the-art surrogate modeling techniques for complex flow simulations. A dedicated webpage with full challenge details, datasets, evaluation metrics, and submission guidelines is currently under development and will be announced separately.</p>
             
-            <p class="contact-info"><strong>Organizers:</strong> Neil Ashton, Johannes Branstetter, and Sid Mishra<br>
+            <p class="contact-info"><strong>Organizers:</strong> Neil Ashton, Johannes Branstetter, and Sid Mishra</p>
         </div>
 
         <div class="challenge-section">
             <h2>Data-Driven Turbulence Modelling Challenge</h2>
             <p>Building on NASA's successful 2022 turbulence modelling challenge, this initiative focuses on advancing data-driven turbulence modelling approaches for 3D cases of industrial relevance. Participants will develop and test novel RANS models, enhanced turbulence closures, hybrid RANS-LES approaches, or other data-driven turbulence modeling techniques on a set of challenging test cases spanning various flow phenomena such as periodic hills, smooth-body separation, automotive wake flows, and wing-body junction flows. Evaluation is based on accuracy, computational cost, and generalizability. The community-driven challenge welcomes test case suggestions from participants. Visit the dedicated challenge webpage at <a href="http://github.com/rmcconke/ml-turbulence-benchmark" target="_blank">github.com/rmcconke/ml-turbulence-benchmark</a> for complete technical specifications, final test case details, training datasets, boundary conditions, and evaluation protocols.</p>
             
-            <p class="dates-box">
+            <div class="dates-box">
                 <strong>Key Dates:</strong><br>
                 • October 2025: Dedicated website launch with complete details<br>
                 • January 2026: Initial submissions due<br>
                 • March 2026: ML4Fluids Conference (4-6 March @ CWI Amsterdam)<br>
                 • Post-March 2026: Dedicated online event for results
-            </p>
+            </div>
             
             <p class="contact-info"><strong>Organizers:</strong> Tyler Buchanan, Paola Cinnella, Richard Dwight, and Ryley McConkey<br>
             <strong>To participate:</strong> Send an expression of interest to <a href="mailto:t.s.b.buchanan@tudelft.nl">t.s.b.buchanan@tudelft.nl</a></p>
@@ -81,5 +121,4 @@
     </main>
 
 </body>
-
 </html>
