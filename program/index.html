@@ -36,9 +36,11 @@
             <td class="navigation">
                 <a title="Register for the Conference" href="registration">Registration</a>
             </td>
+            <!--
             <td class="navigation">
                 <a title="Abstracts" href="abstracts">Abstracts</a>
             </td>
+            -->
             <td class="navigation">
                 <a class="current" title="Conference Program" href="program">Program</a> 
             </td>
@@ -49,6 +51,89 @@
                 <a title="Challenges" href="challenges">Challenges</a>
             </td>
         </tr>
+    </table>
+
+	<h2> Plenary talks </h2>
+    
+    <table class="plenary">
+        <tr>
+            <td class="date" rowspan="3">
+                4 March 10am
+            </td>
+            <td class="title">
+				Causality is 4-D for Scientific Discovery in Fluids
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+				<a href="https://www.eas.caltech.edu/people/adrian-lozano-duran"> Adrian Lozano Duran (CalTech) </a>
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+					Causality is fundamental to scientific discovery, yet most existing inference methods are ill-suited for capturing the full spatio-temporal causality of high-dimensional dynamical systems such as turbulent flows. In this talk, we present a causal-inference framework that quantifies the flow of information among spatio-temporal regions of a system. Given a source and a target field, the method assigns causal scores to the source as functions of both space and time, enabling a hierarchical decomposition of global causal influence into localized spatio-temporal contributions. The framework employs a Vision-Transformer Autoencoder to compress high-dimensional fields into latent representations, with causal influence extracted through multi-head self-attention applied to time-lagged embeddings. We validate the method on controlled benchmarks with known causal structure, demonstrating its ability to accurately recover ground-truth causal patterns. We then apply the approach to several open questions in wall-bounded turbulence, including identifying the causal eddies responsible for generating wall shear stress and the flow structures that give rise to very-large-scale motions.
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="date" rowspan="3">
+                5 March 9am
+            </td>
+            <td class="title">
+					Solution discovery in fluids with high precision using neural networks
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+				<a href="https://icyphysics.stanford.edu/"> Ching-Yao Lai (Stanford U.) </a>
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+				I will discuss examples utilizing neural networks (NNs) to find solutions to partial differential equations (PDEs) that facilitate new discoveries. Despite being deemed universal function approximators, neural networks, in practice, struggle to fit functions with sufficient accuracy for rigorous analysis. Here, we developed multi-stage neural networks that can reduce the prediction error to nearly the machine precision of double-precision floating points within a finite number of iterations. We use accurate NNs to tackle the challenge of searching for singularities in fluid equations (<a href="https://doi.org/10.1103/PhysRevLett.130.244002"> Wang-Lai-Gómez-Serrano-Buckmaster, Phys. Rev. Lett. 2023</a>). Unstable singularities, especially in dimensions greater than one, are exceptionally elusive. With NNs we demonstrate the first discovery of smooth unstable self-similar singularities to unforced incompressible fluid equations (<a href="https://arxiv.org/html/2511.22819v1"> Wang et al., arXiv.2511.22819 </a>). The example illustrates how deep learning can be used to discover new and highly accurate numerical solutions to PDEs.
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="date" rowspan="3">
+                6 March 9am
+            </td>
+            <td class="title">
+					Data over Dogma: Ruthless Empiricism, Strange Ideas, and the Future of Weather Forecasting
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+				<a href="https://danielewworrall.github.io/"> Daniel Worrall (Google Deepmind) </a>
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+					Accurate, reliable weather forecasts are fundamental to protecting life and infrastructure across the globe. While the field has historically been dominated by numerical weather prediction and the simulation of discretised physics, we are currently witnessing the largest disruption to modern meteorology in decades. Machine learning based forecasting has evolved from experimental curiosity to operational reality in a matter of years, now delivering systems that rival and surpass the top physics-based models.  This talk presents Google DeepMind’s latest weather forecasting system, discussing how our development process is guided by an uncompromising empiricism—a philosophy that prioritises statistical evidence over traditional physical intuition. This data-first approach has led to the adoption of strange and counter-intuitive architectural choices that, while unconventional to the fluid dynamics community, have proven essential for blazingly fast, accurate predictions. We will also explore the broader implications of this shift: how machine learning is not just accelerating the way we practice science, but fundamentally altering our understanding of how to model complex dynamical systems.
+            </td>
+        </tr>
+
+        <tr>
+            <td class="date" rowspan="3">
+                6 March 3:30pm
+            </td>
+            <td class="title">
+					TBD
+            </td>
+        </tr>
+        <tr>
+            <td class="speaker">
+				<a href="https://www.iag.uni-stuttgart.de/en/institute/team/Beck-00011/"> Andrea Beck (Stuttgart U.) </a>
+            </td>
+        </tr>
+        <tr>
+            <td class="abstract">
+					TBD
+            </td>
+        </tr>
+
     </table>
 
 
