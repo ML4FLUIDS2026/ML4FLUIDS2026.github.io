@@ -6,6 +6,9 @@ on:
     paths:
       - 'assets/book-ml4fluids-en.pdf'
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
