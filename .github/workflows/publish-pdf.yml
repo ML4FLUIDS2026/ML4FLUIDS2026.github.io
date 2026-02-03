@@ -1,0 +1,28 @@
+name: Publish PDF to Release
+
+on:
+  push:
+    paths:
+      - 'assets/book-ml4fluids-en.pdf'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo (with LFS)
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Pull LFS files
+        run: git lfs pull
+
+      - name: Create or update release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest PDF
+          files: assets/book-ml4fluids-en.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
