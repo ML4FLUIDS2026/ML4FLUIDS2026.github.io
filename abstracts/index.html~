@@ -10,8 +10,8 @@
     <meta name="distribution" content="global">
     <meta name="KeyWords" content="ERCOFTAC, machine learning, fluid dynamics, CWI Amsterdam">
     <!-- This is supposed to speed up loading pushed changes in live website -->
-    <meta http-equiv='cache-control' content='no-cache'> 
-	 <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='cache-control' content='no-cache'>
+	 <meta http-equiv='expires' content='0'>
 	 <meta http-equiv='pragma' content='no-cache'>
     <title>ERCOFTAC ML4FLUIDS 2026</title>
 </head>
@@ -40,13 +40,13 @@
                 <a class="current" title="Abstracts" href="abstracts">Abstracts</a>
             </td>
             <td class="navigation">
-                <a title="Conference Program" href="program">Program</a> 
+                <a title="Conference Program" href="program">Program</a>
             </td>
             <td class="navigation">
                 <a title="Directions to the Conference" href="directions">Venue & hotels</a>
             </td>
             <td class="navigation">
-                <a title="Challenges" href="challenges">Challenges</a>
+                <a title="Challenges" href="challenges">Challenge</a>
             </td>
         </tr>
     </table>
