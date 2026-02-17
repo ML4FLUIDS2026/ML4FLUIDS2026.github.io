@@ -1,0 +1,2337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERCOFTAC ML4Fluids 2026 | Conference Programme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #0f3460;
+            --accent: #16213e;
+            --highlight: #e94560;
+            --light: #f8f9fa;
+            --text: #2d3436;
+            --border: #dfe6e9;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .conference-title {
+            font-family: Arial, sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .conference-edition {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .dates-location {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .section-title {
+            font-family: Arial, sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            border-bottom: 3px solid var(--highlight);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .committee-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .committee-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .committee-card h3 {
+            font-family: Arial, sans-serif;
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--highlight);
+            padding-left: 1rem;
+        }
+
+        .person {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: var(--light);
+            border-radius: 6px;
+            transition: background 0.2s ease;
+        }
+
+        .person:hover {
+            background: #e9ecef;
+        }
+
+        .person strong {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .person em {
+            color: #636e72;
+            font-size: 0.9rem;
+            font-style: normal;
+        }
+
+        .day-schedule {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--highlight);
+        }
+
+        .day-header {
+            font-family: Arial, sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .day-number {
+            background: var(--gradient);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--highlight), transparent);
+        }
+
+        .time-block {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .time-block::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--highlight);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--highlight);
+        }
+
+        .time-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--highlight);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 0.25rem;
+        }
+
+        .event-subtitle {
+            font-style: italic;
+            color: #636e72;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-speaker {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .event-location {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.8rem;
+            color: #95a5a6;
+            margin-top: 0.25rem;
+        }
+
+        .keynote {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--highlight);
+        }
+
+        .parallel-sessions {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 0.5rem;
+        }
+
+        .parallel-sessions h4 {
+            font-size: 1rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .session-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .session-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: border-color 0.2s ease;
+        }
+
+        .session-item:hover {
+            border-color: var(--highlight);
+        }
+
+        .session-code {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--highlight);
+            font-weight: 600;
+        }
+
+        .session-name {
+            font-weight: 500;
+            color: var(--text);
+            margin-top: 0.25rem;
+        }
+
+        .session-room {
+            font-size: 0.85rem;
+            color: #95a5a6;
+            margin-top: 0.25rem;
+        }
+
+        .social-event {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 0.5rem;
+        }
+
+        .social-event strong {
+            font-size: 1.1rem;
+        }
+
+        .updated-notice {
+            text-align: center;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            color: #95a5a6;
+            margin-top: 3rem;
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 768px) {
+            .conference-title {
+                font-size: 2rem;
+            }
+
+            .day-schedule {
+                padding: 1.5rem;
+            }
+
+            .session-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--highlight);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(233, 69, 96, 0.3);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-indicator:hover {
+            transform: scale(1.1);
+        }
+
+        .scroll-indicator svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Search box styles */
+        .search-container {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+            border-radius: 16px;
+        }
+
+        .search-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1.25rem 3.5rem 1.25rem 1.5rem;
+            font-size: 1.1rem;
+            font-family: 'DM Sans', sans-serif;
+            border: 2px solid var(--border);
+            border-radius: 50px;
+            outline: none;
+            transition: all 0.3s ease;
+            background: var(--light);
+        }
+
+        .search-input:focus {
+            border-color: var(--highlight);
+            background: white;
+            box-shadow: 0 4px 20px rgba(233, 69, 96, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--highlight);
+            pointer-events: none;
+        }
+
+        .clear-search {
+            position: absolute;
+            right: 4rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--highlight);
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.2s ease;
+            z-index: 10;
+        }
+
+        .clear-search:hover {
+            background: var(--secondary);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .clear-search.active {
+            display: flex;
+        }
+
+        .search-results-info {
+            text-align: center;
+            margin-top: 1rem;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.9rem;
+            color: #636e72;
+        }
+
+        .highlight {
+            background: rgba(233, 69, 96, 0.2);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #636e72;
+            font-size: 1.1rem;
+        }
+
+        .no-results-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .search-container {
+                padding: 1.5rem;
+            }
+
+            .search-input {
+                font-size: 1rem;
+                padding: 1rem 3rem 1rem 1.25rem;
+            }
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 16px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.4s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            position: sticky;
+            top: 0;
+            background: var(--gradient);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px 16px 0 0;
+            z-index: 10;
+        }
+
+        .modal-title {
+            font-family: Arial, sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-subtitle {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            letter-spacing: 0.05em;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+
+        .close-modal:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .talk-item {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid var(--highlight);
+            transition: all 0.3s ease;
+        }
+
+        .talk-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .talk-time {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--highlight);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .talk-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .talk-authors {
+            color: var(--text);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .session-item {
+            cursor: pointer;
+        }
+
+        .session-item::after {
+            content: '→';
+            float: right;
+            color: var(--highlight);
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .session-item:hover::after {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                margin: 1rem;
+                max-height: 90vh;
+            }
+
+            .modal-header {
+                padding: 1.5rem;
+            }
+
+            .modal-body {
+                padding: 1.5rem;
+            }
+
+            .modal-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Modal -->
+    <div id="sessionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+                <div class="modal-title" id="modalTitle"></div>
+                <div class="modal-subtitle" id="modalSubtitle"></div>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header-content">
+            <div class="conference-edition">3rd Edition</div>
+            <h1 class="conference-title">ERCOFTAC Workshop on<br>Machine Learning for Fluid Dynamics</h1>
+            <div class="dates-location">
+                March 4-6, 2026 | Amsterdam, Netherlands
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Search Box -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <input
+                    type="text"
+                    id="searchInput"
+                    class="search-input"
+                    placeholder="Search by author, title, room, session name..."
+                    autocomplete="off"
+                >
+                <button id="clearSearch" class="clear-search" title="Clear search">&times;</button>
+                <svg class="search-icon" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+            </div>
+            <div id="searchResultsInfo" class="search-results-info"></div>
+        </div>
+
+        <div id="noResultsMessage" class="no-results hidden">
+            <div class="no-results-icon">🔍</div>
+            <div>No results found. Try different keywords.</div>
+        </div>
+
+        <!-- Day 1 -->
+        <section class="section">
+            <h2 class="section-title">Programme Schedule</h2>
+
+            <div class="day-schedule">
+                <div class="day-header">
+                    <div class="day-number">1</div>
+                    <div>Wednesday, March 4, 2026</div>
+                </div>
+
+                <div class="timeline">
+                    <div class="time-block">
+                        <div class="time-label">08:30 – 09:45</div>
+                        <div class="event-title">Arrival and Registration</div>
+                        <div class="event-location">Forum@CWI & Newton@CC</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">09:45 – 10:00</div>
+                        <div class="event-title">Conference Opening</div>
+                        <div class="event-speaker">Prof. Benjamin Sanderse</div>
+                        <div class="event-location">Turing (also streamed in Euler)</div>
+                    </div>
+
+                    <div class="time-block keynote">
+                        <div class="time-label">10:00 – 10:50</div>
+                        <div class="event-title">Keynote Talk</div>
+                        <div class="event-subtitle">Causality is 4-D for Scientific Discovery in Fluids</div>
+                        <div class="event-speaker">Dr. Adrian Lozano Duran (California Institute of Technology)</div>
+                        <div class="event-location">Turing (also streamed in Euler)</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">10:50 – 11:30</div>
+                        <div class="event-title">Coffee Break</div>
+                        <div class="event-location">Forum@CWI & Newton@CC</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">11:30 – 12:30</div>
+                        <div class="event-title">Parallel Sessions</div>
+                        <div class="parallel-sessions">
+                            <h4>Session Tracks:</h4>
+                            <div class="session-grid">
+                                <div class="session-item">
+                                    <div class="session-code">DR1</div>
+                                    <div class="session-name">Dimensionality Reduction 1</div>
+                                    <div class="session-room">Room: Turing</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">EXP</div>
+                                    <div class="session-name">Experiments</div>
+                                    <div class="session-room">Room: Euler</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">O&D1</div>
+                                    <div class="session-name">Optimization & Design 1</div>
+                                    <div class="session-room">Room: L016 Hypathia</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">PIML 1</div>
+                                    <div class="session-name">Physics-informed ML 1</div>
+                                    <div class="session-room">Room: L017 Ada</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">12:30 – 13:40</div>
+                        <div class="event-title">Group Picture + Lunch</div>
+                        <div class="event-location">Forum@CWI & Newton@CC</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">13:40 – 15:20</div>
+                        <div class="event-title">Parallel Sessions</div>
+                        <div class="parallel-sessions">
+                            <h4>Session Tracks:</h4>
+                            <div class="session-grid">
+                                <div class="session-item">
+                                    <div class="session-code">DR2</div>
+                                    <div class="session-name">Dimensionality Reduction 2</div>
+                                    <div class="session-room">Room: Turing</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">TM-LES1</div>
+                                    <div class="session-name">Turbulence Modelling (LES) 1</div>
+                                    <div class="session-room">Room: Euler</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">O&D2</div>
+                                    <div class="session-name">Optimization & Design 2</div>
+                                    <div class="session-room">Room: L016 Hypathia</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">PIML 2</div>
+                                    <div class="session-name">Physics-informed ML 2</div>
+                                    <div class="session-room">Room: L017 Ada</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">15:20 – 16:00</div>
+                        <div class="event-title">Coffee Break</div>
+                        <div class="event-location">Forum@CWI & Newton@CC</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">16:00 – 17:40</div>
+                        <div class="event-title">Parallel Sessions</div>
+                        <div class="parallel-sessions">
+                            <h4>Session Tracks:</h4>
+                            <div class="session-grid">
+                                <div class="session-item">
+                                    <div class="session-code">DR3</div>
+                                    <div class="session-name">Dimensionality Reduction 3</div>
+                                    <div class="session-room">Room: Turing</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">TM-LES2</div>
+                                    <div class="session-name">Turbulence Modelling (LES) 2</div>
+                                    <div class="session-room">Room: Euler</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">ISI1</div>
+                                    <div class="session-name">Inference, Sensor, and Inverse</div>
+                                    <div class="session-room">Room: L016 Hypathia</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">RFHT</div>
+                                    <div class="session-name">Reacting Flow and Heat Transfer</div>
+                                    <div class="session-room">Room: L017 Ada</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="social-event">
+                            <div class="time-label" style="color: white; opacity: 0.9;">17:45 – 20:00</div>
+                            <strong>Drinks Reception</strong><br>
+                            <div style="margin-top: 0.5rem; opacity: 0.95;">Forum@CWI & Newton@CC</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <div class="day-number">2</div>
+                    <div>Thursday, March 5, 2026</div>
+                </div>
+
+                <div class="timeline">
+                    <div class="time-block">
+                        <div class="time-label">08:30 – 09:00</div>
+                        <div class="event-title">Arrival and Registration</div>
+                        <div class="event-location">Forum@CWI & Newton@CC</div>
+                    </div>
+
+                    <div class="time-block keynote">
+                        <div class="time-label">09:00 – 09:50</div>
+                        <div class="event-title">Keynote Talk</div>
+                        <div class="event-subtitle">Solution discovery in fluids with high precision using neural networks</div>
+                        <div class="event-speaker">Dr. Ching-Yao Lai (Stanford University)</div>
+                        <div class="event-location">Turing (also streamed in Euler)</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">09:50 – 10:30</div>
+                        <div class="event-title">Coffee Break</div>
+                        <div class="event-location">Forum@CWI & Newton@CC</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">10:30 – 12:10</div>
+                        <div class="event-title">Parallel Sessions</div>
+                        <div class="parallel-sessions">
+                            <h4>Session Tracks:</h4>
+                            <div class="session-grid">
+                                <div class="session-item">
+                                    <div class="session-code">TM-RANS1</div>
+                                    <div class="session-name">Turbulence Modelling (RANS) 1</div>
+                                    <div class="session-room">Room: Turing</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">DR4</div>
+                                    <div class="session-name">Dimensionality Reduction 4</div>
+                                    <div class="session-room">Room: Euler</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">FI</div>
+                                    <div class="session-name">Feature Identification</div>
+                                    <div class="session-room">Room: L016 Hypathia</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">Dataset</div>
+                                    <div class="session-name">Datasets</div>
+                                    <div class="session-room">Room: L017 Ada</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">12:10 – 13:20</div>
+                        <div class="event-title">Lunch</div>
+                        <div class="event-location">Forum@CWI & Newton@CC</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">13:20 – 15:00</div>
+                        <div class="event-title">Parallel Sessions</div>
+                        <div class="parallel-sessions">
+                            <h4>Session Tracks:</h4>
+                            <div class="session-grid">
+                                <div class="session-item">
+                                    <div class="session-code">TM-RANS2</div>
+                                    <div class="session-name">Turbulence Modelling (RANS) 2</div>
+                                    <div class="session-room">Room: Turing</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">DR5</div>
+                                    <div class="session-name">Dimensionality Reduction 5</div>
+                                    <div class="session-room">Room: Euler</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">Urban</div>
+                                    <div class="session-name">Urban Flow</div>
+                                    <div class="session-room">Room: L016 Hypathia</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">Surrogate1</div>
+                                    <div class="session-name">Surrogate Modelling 1</div>
+                                    <div class="session-room">Room: L017 Ada</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">15:00 – 15:40</div>
+                        <div class="event-title">Coffee Break</div>
+                        <div class="event-location">Forum@CWI & Newton@CC</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">15:40 – 17:20</div>
+                        <div class="event-title">Parallel Sessions</div>
+                        <div class="parallel-sessions">
+                            <h4>Session Tracks:</h4>
+                            <div class="session-grid">
+                                <div class="session-item">
+                                    <div class="session-code">Challenge</div>
+                                    <div class="session-name">Data Challenge</div>
+                                    <div class="session-room">Room: Turing</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">RL1</div>
+                                    <div class="session-name">Reinforcement Learning 1</div>
+                                    <div class="session-room">Room: Euler</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">Maritime</div>
+                                    <div class="session-name">Maritime Applications</div>
+                                    <div class="session-room">Room: L016 Hypathia</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">Surrogate2</div>
+                                    <div class="session-name">Surrogate Modelling 2</div>
+                                    <div class="session-room">Room: L017 Ada</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="social-event">
+                            <div class="time-label" style="color: white; opacity: 0.9;">19:00 onwards</div>
+                            <strong>Conference Dinner</strong><br>
+                            <div style="margin-top: 0.5rem; opacity: 0.95;">Tolhuistuin, IJpromenade 2, 1031 KT Amsterdam<br>Walk-in from 19:00, dinner starts at 19:30</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-schedule">
+                <div class="day-header">
+                    <div class="day-number">3</div>
+                    <div>Friday, March 6, 2026</div>
+                </div>
+
+                <div class="timeline">
+                    <div class="time-block">
+                        <div class="time-label">08:30 – 09:00</div>
+                        <div class="event-title">Arrival and Registration</div>
+                        <div class="event-location">Forum@CWI & Newton@CC</div>
+                    </div>
+
+                    <div class="time-block keynote">
+                        <div class="time-label">09:00 – 09:50</div>
+                        <div class="event-title">Keynote Talk</div>
+                        <div class="event-subtitle">Data over Dogma: Ruthless Empiricism, Strange Ideas, and the Future of Weather Forecasting</div>
+                        <div class="event-speaker">Dr. Daniel Worrall (Google DeepMind)</div>
+                        <div class="event-location">Turing (also streamed in Euler)</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">09:50 – 10:30</div>
+                        <div class="event-title">Coffee Break</div>
+                        <div class="event-location">Forum@CWI & Newton@CC</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">10:30 – 12:10</div>
+                        <div class="event-title">Parallel Sessions</div>
+                        <div class="parallel-sessions">
+                            <h4>Session Tracks:</h4>
+                            <div class="session-grid">
+                                <div class="session-item">
+                                    <div class="session-code">UQ+Q</div>
+                                    <div class="session-name">Uncertainty Quantification & Quantum</div>
+                                    <div class="session-room">Room: Turing</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">RL2</div>
+                                    <div class="session-name">Reinforcement Learning 2</div>
+                                    <div class="session-room">Room: Euler</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">TM-RANS3</div>
+                                    <div class="session-name">Turbulence Modelling (RANS) 3</div>
+                                    <div class="session-room">Room: L016 Hypathia</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">Surrogate3</div>
+                                    <div class="session-name">Surrogate Modelling 3</div>
+                                    <div class="session-room">Room: L017 Ada</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">12:10 – 13:20</div>
+                        <div class="event-title">Lunch</div>
+                        <div class="event-location">Forum@CWI & Newton@CC</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">13:20 – 15:00</div>
+                        <div class="event-title">Parallel Sessions</div>
+                        <div class="parallel-sessions">
+                            <h4>Session Tracks:</h4>
+                            <div class="session-grid">
+                                <div class="session-item">
+                                    <div class="session-code">Solver</div>
+                                    <div class="session-name">Solver</div>
+                                    <div class="session-room">Room: Turing</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">RL3</div>
+                                    <div class="session-name">Reinforcement Learning 3</div>
+                                    <div class="session-room">Room: Euler</div>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-code">Algo</div>
+                                    <div class="session-name">Algorithms</div>
+                                    <div class="session-room">Room: L016 Hypathia</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">15:00 – 15:30</div>
+                        <div class="event-title">Coffee Break</div>
+                        <div class="event-location">Forum@CWI & Newton@CC</div>
+                    </div>
+
+                    <div class="time-block keynote">
+                        <div class="time-label">15:30 – 16:20</div>
+                        <div class="event-title">Keynote Talk</div>
+                        <div class="event-subtitle">TBD</div>
+                        <div class="event-speaker">Prof. Andrea Beck (University of Stuttgart)</div>
+                        <div class="event-location">Turing (also streamed in Euler)</div>
+                    </div>
+
+                    <div class="time-block">
+                        <div class="time-label">16:20 – 16:35</div>
+                        <div class="event-title">Closing Remarks</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="updated-notice">
+            Last updated: February 16, 2026
+        </div>
+    </div>
+
+    <div class="scroll-indicator" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </div>
+
+    <script>
+        // Session data
+        const sessionData = {
+            'DR1': {
+                title: 'Dimensionality Reduction 1',
+                room: 'Turing',
+                chair: 'Luca Magri',
+                time: '11:30 – 12:30',
+                talks: [
+                    {
+                        time: '11:30-11:50',
+                        title: 'Data-driven Modeling of Chaotic Plane Couette flow on a Low-dimensional Spectral Submanifold',
+                        authors: 'Kaszas Balint, Haller George'
+                    },
+                    {
+                        time: '11:50-12:10',
+                        title: 'Stochastic Closure for Stable Long-Time Forecasting of Chaotic Systems',
+                        authors: 'Cayuela Marco, Sayadi Taraneh, Le Chenadec Vincent, Schmid Peter'
+                    },
+                    {
+                        time: '12:10-12:30',
+                        title: 'Non-intrusive oblique-projection-based model reduction with guaranteed-stable latent-space dynamics',
+                        authors: 'Errico Cole, Padovan Alberto, Bodony Daniel'
+                    }
+                ]
+            },
+            'EXP': {
+                title: 'Experiments',
+                room: 'Euler',
+                chair: 'TBD',
+                time: '11:30 – 12:30',
+                talks: [
+                    {
+                        time: '11:30-11:50',
+                        title: 'Data driven rotor-wake dynamics: from measurements to sparse governing equations',
+                        authors: 'Amico Enrico, Cafiero Gioacchino, Montagner Sara'
+                    },
+                    {
+                        time: '11:50-12:10',
+                        title: 'Data-Driven Modelling of Transient Flyer Aerodynamics through Wind Tunnel Measurements',
+                        authors: 'Wastell Owen, Marxen Olaf, Iacobello Giovanni'
+                    },
+                    {
+                        time: '12:10-12:30',
+                        title: 'Searching for a "textbook" of gust-wing encounters',
+                        authors: 'Olivucci Paolo, Rival David E., Srivatsan Kowshik'
+                    }
+                ]
+            },
+            'O&D1': {
+                title: 'Optimization & Design 1',
+                room: 'L016 Hypathia',
+                chair: 'TBD',
+                time: '11:30 – 12:30',
+                talks: [
+                    {
+                        time: '11:30-11:50',
+                        title: 'Deep Reinforcement Learning for Airfoil Shape Optimization: A Comparative Study of PPO and SAC',
+                        authors: 'Bedri Yagiz, Lehmkuhl Oriol'
+                    },
+                    {
+                        time: '11:50-12:10',
+                        title: 'AI-Machine Learning Methodologies to Accelerate CFD-based Design and Optimization for Turbomachinery Applications',
+                        authors: 'Shahpar Shahrokh'
+                    },
+                    {
+                        time: '12:10-12:30',
+                        title: 'Machine Learning-based aerodynamic optimization of a low-Reynolds-number Outlet-Guide-Vane cascade',
+                        authors: 'Li Shuai, Andersson Niklas'
+                    }
+                ]
+            },
+            'PIML 1': {
+                title: 'Physics-informed ML 1',
+                room: 'L017 Ada',
+                chair: 'TBD',
+                time: '11:30 – 12:30',
+                talks: [
+                    {
+                        time: '11:30-11:50',
+                        title: 'Enforcing Physics the Hard Way: On Constrained ML Architectures and Their Subtle Challenges in Fluid Dynamics',
+                        authors: 'Cabral Manuel, Font Bernat, Weymouth Gabriel D.'
+                    },
+                    {
+                        time: '11:50-12:10',
+                        title: 'Conformal Physics-Informed Convolutional Neural Network for Reynolds-Averaged Navier Stokes Equations in Ducts',
+                        authors: 'Bokil Gaurav, Merbold Sebastian, De Graaf Stefanie'
+                    },
+                    {
+                        time: '12:10-12:30',
+                        title: 'Video-conditioned physics-informed neural networks for predicting hidden fluid mechanics in two-phase flows',
+                        authors: 'Dreisbach Maximilian, Kiyani Elham, Kriegseis Jochen, Karniadakis George, Stroh Alexander'
+                    }
+                ]
+            },
+            'DR2': {
+                title: 'Dimensionality Reduction 2',
+                room: 'Turing',
+                chair: 'Andrea Novoa',
+                time: '13:40 – 15:20',
+                talks: [
+                    {
+                        time: '13:40-14:00',
+                        title: 'A Latent Diffusion Transformer for Turbulence Generation and Data Assimilation',
+                        authors: 'Teng Hao, Steinbrenner Fabian, Turan Baris, Xiao Heng'
+                    },
+                    {
+                        time: '14:00-14:20',
+                        title: 'From Filtering to Forcing: Mimicking turbulence modeling via Data Assimilation and Machine Learning',
+                        authors: 'Moussie Tom, Errante Paolo, Joesph Pierric, Meldi Marcello'
+                    },
+                    {
+                        time: '14:20-14:40',
+                        title: 'Efficient Real-Time Adaptation of ROMs for Unsteady Flows Using Data Assimilation',
+                        authors: 'Zighed Ismael, Novoa Andrea, Magri Luca, Sayadi Taraneh'
+                    },
+                    {
+                        time: '14:40-15:00',
+                        title: 'Latent-Space SINDy PDEs for Real-Time Digital Twins of Wall-Bounded Flows',
+                        authors: 'Perez Cuadrado Miguel, Cavallazzi Giorgio Maria, Pinelli Alfredo'
+                    },
+                    {
+                        time: '15:00-15:20',
+                        title: 'Real-time data assimilation in latent spaces for chaotic forecasting',
+                        authors: 'Luca Magri, Özalp Elise, Novoa Andrea'
+                    }
+                ]
+            },
+            'TM-LES1': {
+                title: 'Turbulence Modelling (LES) 1',
+                room: 'Euler',
+                chair: 'Benjamin Sanderse',
+                time: '13:40 – 15:20',
+                talks: [
+                    {
+                        time: '13:40-14:00',
+                        title: 'Machine-learning wall model of large-eddy simulation across low- and high-speed flows over rough surfaces',
+                        authors: 'Ma Rong, Lozano-Duran Adrian'
+                    },
+                    {
+                        time: '14:00-14:20',
+                        title: 'Accelerated subgrid-scale modeling for passive scalar transport in LES of turbulent flows using data-driven methods',
+                        authors: 'Sudhakar Surya Datta, Aditya Konduri, Lakkaraju Rajaram'
+                    },
+                    {
+                        time: '14:20-14:40',
+                        title: 'Comparison of symmetry-preserving data-driven LES closures',
+                        authors: 'Agdestein Syver Døving, Sanderse Benjamin'
+                    },
+                    {
+                        time: '14:40-15:00',
+                        title: 'Reinforcement-Learning-Based Wall Modeling for Turbulent Flows with Varying Pressure Gradients and Its Dependence on Subgrid-Scale Modeling',
+                        authors: 'Bae Jane, Zhou Di'
+                    },
+                    {
+                        time: '15:00-15:20',
+                        title: 'Weighting Physics and Data in PINNs: An Evaluation of Loss-Balancing Strategies for CFD',
+                        authors: 'Correa Santiago, Díaz-Cuadro Christian, Draper Martín'
+                    }
+                ]
+            },
+            'O&D2': {
+                title: 'Optimization & Design 2',
+                room: 'L016 Hypathia',
+                chair: 'TBD',
+                time: '13:40 – 15:20',
+                talks: [
+                    {
+                        time: '13:40-14:00',
+                        title: 'Fast LES-Based Geometry Optimization with Deep Reinforcement Learning and Solution Mapping',
+                        authors: 'Sal Anglada Gaston, Lehmkuhl Oriol, Gomez Gonzales Samuel, Yagiz Bedri'
+                    },
+                    {
+                        time: '14:00-14:20',
+                        title: 'Efficient Thermo-Fluid System Optimization using Invariant CNNs and Parallel Active Learning',
+                        authors: 'Koide Yuri, Kaithakkal Arjun J., Stroh Alexander, Friederich Pascal'
+                    },
+                    {
+                        time: '14:20-14:40',
+                        title: 'Multi-Objective Wind Farm Bayesian Optimisation',
+                        authors: 'Mole Andrew, Magri Luca'
+                    },
+                    {
+                        time: '14:40-15:00',
+                        title: 'Multi-Agent Reinforcement Learning for Wind Farm Optimization in Atmospheric Boundary Layer',
+                        authors: 'Manganelli Felice, Semeraro Onofrio, Leonardi Stefano, Cherubini Stefania, De Palma Pietro'
+                    }
+                ]
+            },
+            'PIML 2': {
+                title: 'Physics-informed ML 2',
+                room: 'L017 Ada',
+                chair: 'TBD',
+                time: '13:40 – 15:20',
+                talks: [
+                    {
+                        time: '13:40-14:00',
+                        title: 'A Generalisable Normalisation Procedure for Physics-Informed Neural Network Training Data',
+                        authors: 'Rawden Joshua, Vanderwel Christina, Symon Sean'
+                    },
+                    {
+                        time: '14:00-14:20',
+                        title: 'From Soft to Hard Turbulence: Architectural and Optimization Requirements of PINNs for Temperature Field Reconstruction in Rayleigh-Bénard Convection',
+                        authors: 'Volk Marie-Christine, Mommert Michael, Bauer Christian, Sergent Anne, Lucor Didier, Wagner Claus'
+                    },
+                    {
+                        time: '14:20-14:40',
+                        title: 'Physics Informed Neural networks for downscaling on irregular meshes: reliability of convergence',
+                        authors: 'Malhomme Nemo, Stabile Giovanni'
+                    },
+                    {
+                        time: '14:40-15:00',
+                        title: 'Sampling and weighting enhanced Physics Informed Neural Networks for highly turbulent Rayleigh-Bénard convection',
+                        authors: 'Mrini Soufiane, Sergent Anne, Lucor Didier, Salort Julien, Chillà Francesca'
+                    }
+                ]
+            },
+            'DR3': {
+                title: 'Dimensionality Reduction 3',
+                room: 'Turing',
+                chair: 'Taraneh Sayadi',
+                time: '16:00 – 17:40',
+                talks: [
+                    {
+                        time: '16:00-16:20',
+                        title: 'Quantized local reduced-order modelling',
+                        authors: 'Colanera Antonio, Magri Luca'
+                    },
+                    {
+                        time: '16:20-16:40',
+                        title: 'An explainable reduced-order model based on dynamic mode decomposition',
+                        authors: 'Amor Christian, Corrochano Adrián, Le Clainche Soledad, Rosti Marco Edoardo'
+                    },
+                    {
+                        time: '16:40-17:00',
+                        title: 'Bayesian Operator Inference for Galerkin projection closure and non-intrusive Reduced-Order Modelling',
+                        authors: 'Procacci Alberto, Iavarone Salvatore'
+                    },
+                    {
+                        time: '17:00-17:20',
+                        title: 'Proper Orthogonal Decomposition for initializing Auto-Encoders',
+                        authors: 'Bousquet Rémi, Faucheu Alex, Nore Caroline, Lucor Didier'
+                    },
+                    {
+                        time: '17:20-17:40',
+                        title: 'Reduced order model-based deep learning for flow prediction',
+                        authors: 'Fiorini Camilla, Lepage Nicolas, Mortazavi Iraj, Beneddine Samir, Thome Nicolas, Sipp Denis'
+                    }
+                ]
+            },
+            'TM-LES2': {
+                title: 'Turbulence Modelling (LES) 2',
+                room: 'Euler',
+                chair: 'TBD',
+                time: '16:00 – 17:40',
+                talks: [
+                    {
+                        time: '16:00-16:20',
+                        title: 'Machine-learning-based subgrid-scale modeling and its application to flows over complex geometries',
+                        authors: 'Ahnn Sangwoo, Kim Myunghwa, Choi Haecheon'
+                    },
+                    {
+                        time: '16:20-16:40',
+                        title: 'Reduced Subgrid Scale Terms in Three-Dimensional Turbulence',
+                        authors: 'Hoekstra Rik, Edeling Wouter'
+                    },
+                    {
+                        time: '16:40-17:00',
+                        title: 'Scalable Graph Network for Robust Sub-Grid Scale Modelling for Compressible Flows',
+                        authors: 'Gonzalez Fernando, Larroque Anthony, Theret Aurelien, Drozda Dantas Martins Luciano, Odier Nicolas, Legaux Joeffrey, Teste Olivier'
+                    },
+                    {
+                        time: '17:00-17:20',
+                        title: 'Machine-learning-based largest-eddy simulation of turbulence and its generalisability to unseen conditions',
+                        authors: 'Inubushi Masanobu, Satoshi Matsumoto, Susumu Goto'
+                    },
+                    {
+                        time: '17:20-17:40',
+                        title: 'Data-driven modeling of hypersonic flows in chemical non-equilibrium with catalytic surfaces',
+                        authors: 'Sarras Konstantinos, Magin Thierry, Schmid Peter, Sayadi Taraneh'
+                    }
+                ]
+            },
+            'ISI1': {
+                title: 'Inference, Sensor, and Inverse',
+                room: 'L016 Hypathia',
+                chair: 'TBD',
+                time: '16:00 – 17:40',
+                talks: [
+                    {
+                        time: '16:00-16:20',
+                        title: 'Estimating Rotor-Effective Wind Speed Using Synthetic LiDAR–Based Wind-Field Reconstruction',
+                        authors: 'Draper Martín, Schlipf David, Díaz-Cuadro Christian, Correa Santiago'
+                    },
+                    {
+                        time: '16:20-16:40',
+                        title: 'Aerodynamic coefficients estimation from optimized surface pressure sensor distribution with multi-output Gaussian Processes Regression using wind tunnel data',
+                        authors: 'Bucquet Quentin, Podvin Bérengère, Iavarone Salvatore, Hanna Badoui, Braud Caroline, Guilmineau Emmanuel'
+                    },
+                    {
+                        time: '16:40-17:00',
+                        title: 'Smart Sensor Placement in Turbulent Flows: A Correlation-Aware Attribution Framework',
+                        authors: 'Leung Sze Chai, Zhou Di, Bae Jane'
+                    },
+                    {
+                        time: '17:00-17:20',
+                        title: 'Remember to "forget": overcoming the ill conditioned inverse problem in chaos by information theory',
+                        authors: 'Fung Lloyd'
+                    }
+                ]
+            },
+            'RFHT': {
+                title: 'Reacting Flow and Heat Transfer',
+                room: 'L017 Ada',
+                chair: 'TBD',
+                time: '16:00 – 17:40',
+                talks: [
+                    {
+                        time: '16:00-16:20',
+                        title: 'Machine Learning Tools for Studying Laser-Induced Ignition in a Rocket Combustor',
+                        authors: 'Iaccarino Gianluca'
+                    },
+                    {
+                        time: '16:20-16:40',
+                        title: 'Dynamic Chemical Reactor Network for combustion systems',
+                        authors: 'Novelli Chiara, Procacci Alberto, Parente Alessandro'
+                    },
+                    {
+                        time: '16:40-17:00',
+                        title: 'Modelling chemistry integration via deep neural networks in LES-PDF simulations of turbulent sooting flames',
+                        authors: 'Liu Weitao, Kronenburg Andreas, Zirwes Thorsten'
+                    },
+                    {
+                        time: '17:00-17:20',
+                        title: 'Physics-Informed Reduced-Order Modeling of Combustion Dynamics via Gaussian Process Regression and Data Assimilation',
+                        authors: 'Lopez Constanza, Procacci Alberto, Podvin Bérengère, Iavarone Salvatore'
+                    }
+                ]
+            },
+            'TM-RANS1': {
+                title: 'Turbulence Modelling (RANS) 1',
+                room: 'Turing',
+                chair: 'Ali Eidi',
+                time: '10:30 – 12:10',
+                talks: [
+                    {
+                        time: '10:30-10:50',
+                        title: 'CFD-driven symbolic regression of RANS transition models',
+                        authors: 'Zemmour Louenas, Cinnella Paola, Gloerfelt Xavier'
+                    },
+                    {
+                        time: '10:50-11:10',
+                        title: 'Adjoint-Assisted CFD-Driven Symbolic RANS Modeling via Kolmogorov-Arnold Networks',
+                        authors: 'Siddiqui Affan, Tian Renzhi, Dwight Richard'
+                    },
+                    {
+                        time: '11:10-11:30',
+                        title: 'Data-driven correction of a RANS-predicted turbulent heat flux applied to high-order CFD',
+                        authors: 'Clément Levillain, Lodato Guido'
+                    },
+                    {
+                        time: '11:30-11:50',
+                        title: 'Data-driven turbulence modelling in hypersonic flows using sparse symbolic regression',
+                        authors: 'Calvi Paul, Gloerfelt Xavier, Breil Jérôme, Olazabal Marina, Cinnella Paola'
+                    },
+                    {
+                        time: '11:50-12:10',
+                        title: 'Correcting Differential Reynolds Stress Models Using Data-Assimilation',
+                        authors: 'Farro Gianmarco, Content Cédric, Volpiani Pedro, Sipp Denis'
+                    }
+                ]
+            },
+            'DR4': {
+                title: 'Dimensionality Reduction 4',
+                room: 'Euler',
+                chair: 'TBD',
+                time: '10:30 – 12:10',
+                talks: [
+                    {
+                        time: '10:30-10:50',
+                        title: 'Physics Informed Graph Neural Networks for Nonlinear Dynamics',
+                        authors: 'Calandriello Gennaro, Romor Francesco, Stabile Giovanni'
+                    },
+                    {
+                        time: '10:50-11:10',
+                        title: 'A Reduced Order Model for predicting the dynamics of the Rayleigh-Taylor Instability',
+                        authors: 'Granger Téo, Briard Antoine, Creusy Paul, Gréa Benoît-Joseph'
+                    },
+                    {
+                        time: '11:10-11:30',
+                        title: 'Low-dimensional representation of intermittent geophysical turbulence with statistics-informed convolutional autoencoders',
+                        authors: 'Foldes Raffaello, Camporeale Enrico, Marino Raffaele'
+                    },
+                    {
+                        time: '11:30-11:50',
+                        title: 'Reduced state space approach to identifying precursors to extreme events in turbulent flows',
+                        authors: 'Kevin Schuurman, Dwight Richard, Doan Anh Khoa'
+                    },
+                    {
+                        time: '11:50-12:10',
+                        title: 'A physics-based and theoretically proven precursor of extreme events with covariant Lyapunov vectors',
+                        authors: 'Consonni Riccardo, Magri Luca'
+                    }
+                ]
+            },
+            'FI': {
+                title: 'Feature Identification',
+                room: 'L016 Hypathia',
+                chair: 'Anh Khoa Doan',
+                time: '10:30 – 12:10',
+                talks: [
+                    {
+                        time: '10:30-10:50',
+                        title: 'Weak Dominant Balance: A robust method for identifying structure in more complex fluid flows',
+                        authors: 'Ahnert Samuel, Lagemann Esther, Bae Jane, Vinuesa Ricardo, Lagemann Christian, Brunton Steven'
+                    },
+                    {
+                        time: '10:50-11:10',
+                        title: 'Feature Extraction from Complex Flow Fields: a Morphing-based Approach under Geometric Variability',
+                        authors: 'Margheritti Riccardo, Semeraro Onofrio, Quadrio Maurizio, Boracchi Giacomo'
+                    },
+                    {
+                        time: '11:10-11:30',
+                        title: 'Sweep events characterization through LSTM network',
+                        authors: 'Saccaggi Enrico, Zaza Domenico, Iovieno Michele, Mendez Miguel Alfonso, Di Cicca Gaetano Maria'
+                    },
+                    {
+                        time: '11:30-11:50',
+                        title: 'Predicting the linear instability eigenspectra using Deep Learning',
+                        authors: 'Sánchez-Domínguez Miguel, De Vicente Javier, Lacasa Lucas, Chávez-Módena Miguel, Padilla-Montero Iván, Rodríguez Daniel, Valero Eusebio'
+                    },
+                    {
+                        time: '11:50-12:10',
+                        title: 'Neural operator-based Global Stability and Resolvent Analysis',
+                        authors: 'Wang Chengyun, Chen Liwei, Thuerey Nils'
+                    }
+                ]
+            },
+            'Dataset': {
+                title: 'Datasets',
+                room: 'L017 Ada',
+                chair: 'TBD',
+                time: '10:30 – 12:10',
+                talks: [
+                    {
+                        time: '10:30-10:50',
+                        title: 'BCN16-HFWind: A High-Fidelity LES Dataset and its Application to Data-Driven Urban Flow Predictions',
+                        authors: 'Duró Josep Maria, Mestres Ernest, Hernández Fabian, Calafell Joan, Lehmkuhl Oriol, Rodriguez Ivette'
+                    },
+                    {
+                        time: '10:50-11:10',
+                        title: 'A Blended Wing Body Aircraft Dataset and Surrogate Model for Aerodynamic Predictions',
+                        authors: 'Sung Nicholas, Spreizer Steven, Elrefaie Mohamed, Jones Matthew, Ahmed Faez'
+                    },
+                    {
+                        time: '11:10-11:30',
+                        title: 'Benchmarking State-of-the-Art Machine Learning Models on the DrivAerNet++ Dataset',
+                        authors: 'Elrefaie Mohamed'
+                    },
+                    {
+                        time: '11:30-11:50',
+                        title: 'Identification of optimal training data for non-intrusive model reduction via operator inference',
+                        authors: 'Rosenberger Henrik, Sanderse Benjamin, Stabile Giovanni'
+                    },
+                    {
+                        time: '11:50-12:10',
+                        title: 'Intelligent sampling for scientific model discovery: Learning to optimize and optimizing to learn',
+                        authors: 'Larrañaga Ana, Fasel Urban, Brunton Steven L.'
+                    }
+                ]
+            },
+            'TM-RANS2': {
+                title: 'Turbulence Modelling (RANS) 2',
+                room: 'Turing',
+                chair: 'TBD',
+                time: '13:20 – 15:00',
+                talks: [
+                    {
+                        time: '13:20-13:40',
+                        title: 'Coupling data assimilation and machine learning to improve the Spalart Allmaras turbulence model for transonic flows',
+                        authors: 'Carduner Louis, Fanizza Bartolomeo, Volpiani Pedro Stefanin, Renac Florent, Sipp Denis'
+                    },
+                    {
+                        time: '13:40-14:00',
+                        title: 'Using Field Inversion Machine Learning to model the Reynolds Stress Tensor in the SU2 RANS flow solver',
+                        authors: 'Boxho Margaux, Goffart Nicolas, Toulorge Thomas'
+                    },
+                    {
+                        time: '14:00-14:20',
+                        title: 'Data-Driven Correction of RANS Models for Urban Flow Prediction via Data Assimilation and Machine Learning',
+                        authors: 'Rosellini Matteo, Ursetto Aurora, Tavazzi Pietro, Mariotti Alessandro, Stabile Giovanni, Salvetti Maria Vittoria'
+                    },
+                    {
+                        time: '14:20-14:40',
+                        title: 'Bayesian inversion of RANS turbulence models in Flow-MRI',
+                        authors: 'Namuroy Claire, Kontogiannis Alexandros, Juniper M.P.'
+                    },
+                    {
+                        time: '14:40-15:00',
+                        title: 'Field-Inversion and Machine-Learning–Assisted Correction of the Compressible RANS Equations: Application to Shock-Wave/Turbulent Boundary-Layer Interactions',
+                        authors: 'Fanizza Bartolomeo, Volpiani Pedro Stefanin, Renac Florent, Sipp Denis'
+                    }
+                ]
+            },
+            'DR5': {
+                title: 'Dimensionality Reduction 5',
+                room: 'Euler',
+                chair: 'TBD',
+                time: '13:20 – 15:00',
+                talks: [
+                    {
+                        time: '13:20-13:40',
+                        title: 'MOReDDPM - DDPMs for Non-intrusive Reduced-order Modeling of Parametric Fluid Flows',
+                        authors: 'Nikken Michiel, Botteghi Nicolò, Califano Federico, Glas Silke'
+                    },
+                    {
+                        time: '13:40-14:00',
+                        title: 'Optimal transport-based reduced order modeling for two-phase flows',
+                        authors: 'Khamlich Moaad, Tonicello Niccolò, Pichi Federico, Rozza Gianluigi'
+                    },
+                    {
+                        time: '14:00-14:20',
+                        title: 'Latent-Space Model Predictive Control for Partially-Observable High-Dimensional Systems',
+                        authors: 'Marra Luigi, Semeraro Onofrio, Mathelin Lionel, Meilán-Vila Andrea, Discetti Stefano'
+                    },
+                    {
+                        time: '14:20-14:40',
+                        title: 'Predictive reduced order models of unsteady chaotic flows using transformer architecture',
+                        authors: 'Taneja Kashish, Sayadi Taraneh, Mortazavi Iraj'
+                    },
+                    {
+                        time: '14:40-15:00',
+                        title: 'Generalization capabilities of Transformers in fluid dynamics',
+                        authors: 'Ifaistos Theofanis, Nastorg Matthieu, Menier Emmanuel, Charpiat Guillaume, Schoenauer Marc'
+                    }
+                ]
+            },
+            'Urban': {
+                title: 'Urban Flow',
+                room: 'L016 Hypathia',
+                chair: 'TBD',
+                time: '13:20 – 15:00',
+                talks: [
+                    {
+                        time: '13:20-13:40',
+                        title: 'Urban Digital Twins at City Scale: Coupling High-Fidelity CFD with Uncertainty-Aware Machine Learning',
+                        authors: 'Kokkinakis Ioannis, Christakis Nicholas, Drikakis Dimitris'
+                    },
+                    {
+                        time: '13:40-14:00',
+                        title: 'Meta-Learning Enhanced Physics-Informed Neural Networks for Predicting Urban Canyon Wind Flows',
+                        authors: 'Antoniou Nestoras, Laakkonen Janne, Mouzourides Petros, Neophytou Marina, Hautamäki Ville'
+                    },
+                    {
+                        time: '14:00-14:20',
+                        title: 'Towards predicting urban flows with GAVI and SHRED',
+                        authors: 'Eiximeno Benet, Miró Arnau, Duró Josep Maria, Kutz J. Nathan, Lehmkuhl Oriol, Rodriguez Ivette'
+                    },
+                    {
+                        time: '14:20-14:40',
+                        title: 'Neural Physics: Using machine-learning–libraries to build a differentiable physics-based solver applied to urban flows',
+                        authors: 'Heaney Claire, Chen Boyang, Pain Christopher'
+                    },
+                    {
+                        time: '14:40-15:00',
+                        title: 'Reflection-Equivariant Graph Neural Networks for Predicting Wind Loads on Buildings',
+                        authors: 'Vargiemezis Themistoklis, Kanatsoulis Charilaos, Gorle Catherine'
+                    }
+                ]
+            },
+            'Surrogate1': {
+                title: 'Surrogate Modelling 1',
+                room: 'L017 Ada',
+                chair: 'TBD',
+                time: '13:20 – 15:00',
+                talks: [
+                    {
+                        time: '13:20-13:40',
+                        title: 'Discretization Invariant Neural Field Surrogates for Large-Scale Aerodynamic Simulation',
+                        authors: 'Catalani Giovanni, Bertrand Xavier, Tost Frédéric, Bauerheim Michaël, Morlier Joseph'
+                    },
+                    {
+                        time: '13:40-14:00',
+                        title: 'Towards foundation surrogate model for flow fields around wings',
+                        authors: 'Yang Yunjia, Thuerey Nils'
+                    },
+                    {
+                        time: '14:00-14:20',
+                        title: 'Lossless Domain Mapping for Learning CFD Fields across Geometries',
+                        authors: 'Tamburini Emanuele, Cinnella Paola, Belme Anca-Claudia'
+                    },
+                    {
+                        time: '14:20-14:40',
+                        title: 'Machine-Learning-Based Surrogate Modeling for Stochastic Multiscale Simulation Methodology',
+                        authors: 'Kim Changho, Xu Zihan, Nonaka Andrew, Zhu Yuanran'
+                    }
+                ]
+            },
+            'Challenge': {
+                title: 'Data Challenge',
+                room: 'Turing',
+                chair: 'Tyler Buchanan',
+                time: '15:40 – 17:20',
+                talks: [
+                    {
+                        time: '15:40-16:00',
+                        title: 'CYPHER machine learning challenge 2025: a community effort for data-driven turbulent combustion modeling',
+                        authors: 'Lorenzo Piu, Lapenna Pasquale, Bottari Stefano, Osseily Tamara, Baffetti Tommaso, Indelicato Giuseppe, Shigematsu Kosuke, Tocilla Albina, Kazani Jonid, Attili Antonio, Parente Alessandro'
+                    },
+                    {
+                        time: '16:00-16:10',
+                        title: 'FluidsBench: A benchmark for the next generation of Computational Fluid Dynamics AI models',
+                        authors: 'Neil Ashton'
+                    },
+                    {
+                        time: '16:10-16:25',
+                        title: 'Presentation of the Turbulence Modelling Challenge',
+                        authors: 'Tyler Buchanan'
+                    },
+                    {
+                        time: '16:25-16:40',
+                        title: 'Towards a machine learning-augmented one-equation turbulence model for external aerodynamics in open-source framework',
+                        authors: 'Di Fabbio Tony, Segalerba Eric, Guerrero Rivas Joel Enrique'
+                    },
+                    {
+                        time: '16:40-16:55',
+                        title: 'Data-Driven RANS Closures Using Adaptive Curvature Classifier for Vortex Flows',
+                        authors: 'Buchanan Tyler, West Alastair, Dwight Richard'
+                    },
+                    {
+                        time: '16:55-17:10',
+                        title: 'Symbolic Turbulence Modelling with Multi-Agent Reinforcement Learning',
+                        authors: 'Tan Zing Shawn, Eidi Ali, Buchanan Tyler, Dwight Richard P.'
+                    },
+                    {
+                        time: '17:10-17:25',
+                        title: 'Towards a unified turbulence model through multi-objective learning',
+                        authors: 'Wang Haochen, Liu Zhuoran, Zhao Zhuolin, Xiao Heng'
+                    }
+                ]
+            },
+            'RL1': {
+                title: 'Reinforcement Learning 1',
+                room: 'Euler',
+                chair: 'TBD',
+                time: '15:40 – 17:20',
+                talks: [
+                    {
+                        time: '15:40-16:00',
+                        title: 'Controlling Mode Transitions in Rotating Detonation Engines using Deep Reinforcement Learning',
+                        authors: 'Holme Kristian, Rabault Jean, Vinuesa Ricardo, Mortensen Mikael'
+                    },
+                    {
+                        time: '16:00-16:20',
+                        title: 'Deep Reinforcement Learning for Active Control of Vortex-Induced Vibrations',
+                        authors: 'Alhussein Hussam, Font Bernat, Daqaq Mohammed'
+                    },
+                    {
+                        time: '16:20-16:40',
+                        title: 'Deep reinforcement learning for heat transfer control in turbulent convection',
+                        authors: 'Zhou Zisong, Zhu Xiaojue'
+                    },
+                    {
+                        time: '16:40-17:00',
+                        title: 'Reinforcement Learning for Complex Flows Modelling',
+                        authors: 'Helal Isa, Giauque Alexis, Corre Christophe, Sauret Emilie'
+                    }
+                ]
+            },
+            'Maritime': {
+                title: 'Maritime Applications',
+                room: 'L016 Hypathia',
+                chair: 'Bernat Font',
+                time: '15:40 – 17:20',
+                talks: [
+                    {
+                        time: '15:40-16:00',
+                        title: 'Machine Learning approaches to predict shape sensitivities for ship hulls',
+                        authors: 'Arian Maram Moloud, Bletsos Georgios, Schwarz Henning, Palm Michael, Rung Thomas'
+                    },
+                    {
+                        time: '16:00-16:20',
+                        title: 'Predicting pressure distributions on surface ship hulls using boundary graph neural networks',
+                        authors: 'Jena Sankalp, Weymouth Gabriel, Lidtke Artur, Coraddu Andrea'
+                    },
+                    {
+                        time: '16:20-16:40',
+                        title: 'Prediction of ship hydrodynamic resistance with artificial neural networks',
+                        authors: 'Lefkiou Christoforos, Koukouvinis Phoevos (Foivos), Chatzis Sotirios'
+                    }
+                ]
+            },
+            'Surrogate2': {
+                title: 'Surrogate Modelling 2',
+                room: 'L017 Ada',
+                chair: 'Didier Lucor',
+                time: '15:40 – 17:20',
+                talks: [
+                    {
+                        time: '15:40-16:00',
+                        title: 'IGM: A physics-informed deep learning model for large-scale ice-sheet flow',
+                        authors: 'Gregov Thomas, Rosier Sebastian, Finley Brandon, Vieli Andreas, Jouvet Guillaume'
+                    },
+                    {
+                        time: '16:00-16:20',
+                        title: 'Downscaling simulation dynamics for regional weather forecasting',
+                        authors: 'Jackaman James, Celledoni Elena'
+                    },
+                    {
+                        time: '16:20-16:40',
+                        title: 'Proof of Concept of a Real-Time Fluid Dynamics Model for Immersive Environments Using Artificial Intelligence',
+                        authors: 'Laot Titouan, Marchal Antoine, Perrot Vincent'
+                    }
+                ]
+            },
+            'UQ+Q': {
+                title: 'Uncertainty Quantification and Quantum',
+                room: 'Turing',
+                chair: 'Richard Dwight',
+                time: '10:30 – 12:10',
+                talks: [
+                    {
+                        time: '10:30-10:50',
+                        title: 'A Surrogate-Informed Sparse Grid Interpolation for Uncertainty Quantification and Sensitivity Analysis of Complex Flows',
+                        authors: 'Salvetti Maria Vittoria, Rosellini Matteo, Fruzza Filippo, Mariotti Alessandro, Tamellini Lorenzo'
+                    },
+                    {
+                        time: '10:50-11:10',
+                        title: "Shape generative models with LDDM's flow conditional matching: an application to uncertainty quantification in hemodynamics",
+                        authors: 'Romor Francesco, Caiazzo Alfonso, Katz Sarah'
+                    },
+                    {
+                        time: '11:10-11:30',
+                        title: 'Shape-informed surrogate modeling and applications to data assimilation and graph neural networks',
+                        authors: 'Caiazzo Alfonso, Romor Francesco, Goubergrits Leonid, Galarce Felipe, Brüning Jan'
+                    },
+                    {
+                        time: '11:30-11:50',
+                        title: 'Solving nonlinear differential equations with quantum computers and a Fokker-Planck embedding',
+                        authors: 'Ahmed Osama, Tennie Felix, Magri Luca'
+                    },
+                    {
+                        time: '11:50-12:10',
+                        title: 'Learning a Surrogate Quantum Circuit for the Collision Operator in the Lattice Boltzmann Method',
+                        authors: 'Lacatus Monica, Möller Matthias'
+                    }
+                ]
+            },
+            'RL2': {
+                title: 'Reinforcement Learning 2',
+                room: 'Euler',
+                chair: 'Kamila Zdybał',
+                time: '10:30 – 12:10',
+                talks: [
+                    {
+                        time: '10:30-10:50',
+                        title: 'Viscoelastic Turbulent Channel Drag Reduction via Opposition Control Using Multi-Agent Reinforcement Learning',
+                        authors: 'Sharma Udit, Beneitez Miguel, Wittberg Lisa Prahl, Mirjalili Shahab, Vinuesa Ricardo, Tammisola Outi'
+                    },
+                    {
+                        time: '10:50-11:10',
+                        title: 'Wall-to-Flow: GAN-Assisted Deep Reinforcement Learning for Turbulent Flow Control from Sparse Wall Measurements',
+                        authors: 'Cavallazzi Giorgio Maria, Perez Cuadrado Miguel, Pinelli Alfredo'
+                    },
+                    {
+                        time: '11:10-11:30',
+                        title: 'Reinforcement learning for autonomous observation in optical velocimetry',
+                        authors: 'Zdybał Kamila, Mucignat Claudio, Lunati Ivan'
+                    }
+                ]
+            },
+            'TM-RANS3': {
+                title: 'Turbulence Modelling (RANS) 3',
+                room: 'L016 Hypathia',
+                chair: 'TBD',
+                time: '10:30 – 12:10',
+                talks: [
+                    {
+                        time: '10:30-10:50',
+                        title: 'Development of a RANS Local Pressure-Gradient Closure for Transition Modeling',
+                        authors: 'Capel Jorquera Javier, Cardesa José Ignacio, Pascal Lucas, Chávez-Módena Miguel, Valero Eusebio, González Leo Miguel'
+                    },
+                    {
+                        time: '10:50-11:10',
+                        title: 'Generalizable Graph Neural Operators for Field Inversion Based RANS Corrections',
+                        authors: 'Stumpo Leonardo, Ferrero Andrea, Masseni Filippo, Pastrone Dario'
+                    },
+                    {
+                        time: '11:10-11:30',
+                        title: 'Multi-Fidelity Data-Driven Modeling, Reynolds Number Extrapolation, and a log(Re) Solution to the Turbulence Problem',
+                        authors: 'Li Jiaqi, Huang George, Kunz Robert, Yang Xiang'
+                    },
+                    {
+                        time: '11:30-11:50',
+                        title: 'Data-Driven Turbulence Modeling using Coarse-Grid Nonlinear Super-Stencils with Wall Functions',
+                        authors: 'Lyu Shiyu, Wang Zhong-Nan'
+                    },
+                    {
+                        time: '11:50-12:10',
+                        title: 'Learning a Heat-Flux Closure for Jet-in-Crossflow Using Indirect Data',
+                        authors: 'Zhao Zhuolin, Wang Haochen, Xiao Heng'
+                    }
+                ]
+            },
+            'Surrogate3': {
+                title: 'Surrogate Modelling 3',
+                room: 'L017 Ada',
+                chair: 'Wouter Edeling',
+                time: '10:30 – 12:10',
+                talks: [
+                    {
+                        time: '10:30-10:50',
+                        title: 'Toward generative surrogate models of hydrodynamic instabilities and turbulent mixing',
+                        authors: 'Thévenin Sébastien, Sterbentz Dane, Korner Kevin, Haberstich Cécile, Briard Antoine, Gréa Benoît-Joseph, Nadiga Balasubramanya T., Schill William, Belof Jonathan L.'
+                    },
+                    {
+                        time: '10:50-11:10',
+                        title: 'Flow-based generative modeling of turbulent channel flow fields',
+                        authors: 'Aerts Frederik, Nuyens Dirk, Meyers Johan'
+                    },
+                    {
+                        time: '11:10-11:30',
+                        title: 'Temporal coherency in high-resolution 3D neural PDE surrogates',
+                        authors: 'Luca Guastoni, Thuerey Nils'
+                    },
+                    {
+                        time: '11:30-11:50',
+                        title: 'Neural Operators For Accelerating Flow Field Predictions in a 2D Compressor Cascade',
+                        authors: 'Xavier Alan, Renson Ludovic'
+                    },
+                    {
+                        time: '11:50-12:10',
+                        title: 'ML-based correction of coarse CFD simulations for turbomachinery flows',
+                        authors: 'Tschisgale Silvio, Eichenhardt Timo, Kempe Tobias'
+                    }
+                ]
+            },
+            'Solver': {
+                title: 'Solver',
+                room: 'Turing',
+                chair: 'TBD',
+                time: '13:20 – 15:00',
+                talks: [
+                    {
+                        time: '13:20-13:40',
+                        title: 'Accelerating Numerical Simulations in CFD by Model Reduction and Scientific Machine Learning',
+                        authors: 'Rozza Gianluigi'
+                    },
+                    {
+                        time: '13:40-14:00',
+                        title: 'Acceleration of an AMG pressure solver using graph neural networks',
+                        authors: 'Eric Chillon, Lidtke Artur, Doan Nguyen Anh Khoa, Font Bernat'
+                    },
+                    {
+                        time: '14:00-14:20',
+                        title: 'diffSPH: Differentiable Smoothed Particle Hydrodynamics for Adjoint Optimization and Machine Learning',
+                        authors: 'Winchenbach Rene, Thuerey Nils'
+                    },
+                    {
+                        time: '14:20-14:40',
+                        title: 'Interpretable and differentiable fluid flow solvers in latent spaces with operator learning',
+                        authors: 'Arzani Amirhossein'
+                    },
+                    {
+                        time: '14:40-15:00',
+                        title: 'Bridging Physics and Learning: End-to-End and Residual-Based Optimization in Differentiable Solvers',
+                        authors: 'Saverio Luca, Bucci Michele Alessandro, Content Cédric, Sipp Denis'
+                    }
+                ]
+            },
+            'RL3': {
+                title: 'Reinforcement Learning 3',
+                room: 'Euler',
+                chair: 'Bernat Font',
+                time: '13:20 – 15:00',
+                talks: [
+                    {
+                        time: '13:20-13:40',
+                        title: 'SINDy-RL: Interpretable and Efficient Model-Based Reinforcement Learning',
+                        authors: 'Zolman Nicholas, Lagemann Christian, Fasel Urban, Kutz J. Nathan, Brunton Steven L.'
+                    },
+                    {
+                        time: '13:40-14:00',
+                        title: 'Improvement turbulence control through explainable deep learning',
+                        authors: 'Beneitez Miguel, Cremades Andrés, Guastoni Luca, Vinuesa Ricardo'
+                    },
+                    {
+                        time: '14:00-14:20',
+                        title: 'Transfer learning strategies for accelerating reinforcement-learning-based flow control',
+                        authors: 'Saeed Salehi'
+                    },
+                    {
+                        time: '14:20-14:40',
+                        title: 'Gradient-enhanced reinforcement learning for fluid flow control using differentiable simulations',
+                        authors: 'Mokbel Sajeda, Lagemann Christian, Lagemann Esther, Brunton Steven'
+                    }
+                ]
+            },
+            'Algo': {
+                title: 'Algorithms',
+                room: 'L016 Hypathia',
+                chair: 'TBD',
+                time: '13:20 – 15:00',
+                talks: [
+                    {
+                        time: '13:20-13:40',
+                        title: 'Gaussian Artificial Entropy viscosity via machine Learning sensor',
+                        authors: 'Limonchi Samuel, Rodriguez Ivette, Lehmkuhl Oriol'
+                    },
+                    {
+                        time: '13:40-14:00',
+                        title: 'An octree-based sampling algorithm for processing big simulation data',
+                        authors: 'Geise Janis, Spinner Sebastian, Weiner Andre'
+                    },
+                    {
+                        time: '14:00-14:20',
+                        title: 'Stabilizing PDE-ML systems with applications to fluid dynamics',
+                        authors: 'Stinis Panos, Howard Amanda, Ahmed Shady, Qadeer Saad'
+                    }
+                ]
+            }
+        };
+
+        function openModal(sessionCode) {
+            const session = sessionData[sessionCode];
+            if (!session) return;
+
+            const modal = document.getElementById('sessionModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalSubtitle = document.getElementById('modalSubtitle');
+            const modalBody = document.getElementById('modalBody');
+
+            modalTitle.textContent = session.title;
+            modalSubtitle.textContent = `${session.time} | Room: ${session.room} | Chair: ${session.chair}`;
+
+            let talksHTML = '';
+            session.talks.forEach(talk => {
+                talksHTML += `
+                    <div class="talk-item">
+                        <div class="talk-time">${talk.time}</div>
+                        <div class="talk-title">${talk.title}</div>
+                        <div class="talk-authors">${talk.authors}</div>
+                    </div>
+                `;
+            });
+
+            modalBody.innerHTML = talksHTML;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('sessionModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('sessionModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Add click handlers to session items
+        document.addEventListener('DOMContentLoaded', function() {
+            const sessionItems = document.querySelectorAll('.session-item');
+            sessionItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const sessionCode = this.querySelector('.session-code').textContent.trim();
+                    openModal(sessionCode);
+                });
+            });
+
+            // Initialize search
+            initializeSearch();
+        });
+
+        // Search functionality
+        function initializeSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const clearButton = document.getElementById('clearSearch');
+            const searchResultsInfo = document.getElementById('searchResultsInfo');
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            let searchTimeout;
+
+            searchInput.addEventListener('input', function(e) {
+                const value = e.target.value.trim();
+
+                // Show/hide clear button
+                if (value) {
+                    clearButton.classList.add('active');
+                } else {
+                    clearButton.classList.remove('active');
+                }
+
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    performSearch(value.toLowerCase());
+                }, 300);
+            });
+
+            clearButton.addEventListener('click', function() {
+                searchInput.value = '';
+                clearButton.classList.remove('active');
+                performSearch('');
+                searchInput.focus();
+            });
+        }
+
+        function performSearch(query) {
+            const searchResultsInfo = document.getElementById('searchResultsInfo');
+            const noResultsMessage = document.getElementById('noResultsMessage');
+
+            // Clear previous highlights
+            document.querySelectorAll('.highlight').forEach(el => {
+                const parent = el.parentNode;
+                parent.replaceChild(document.createTextNode(el.textContent), el);
+                parent.normalize();
+            });
+
+            if (!query) {
+                // Show all content
+                document.querySelectorAll('.day-schedule').forEach(el => {
+                    el.classList.remove('hidden');
+                });
+                document.querySelectorAll('.section').forEach(el => {
+                    el.classList.remove('hidden');
+                });
+                document.querySelectorAll('.time-block').forEach(el => {
+                    el.classList.remove('hidden');
+                });
+                document.querySelectorAll('.session-item').forEach(el => {
+                    el.classList.remove('hidden');
+                });
+                searchResultsInfo.textContent = '';
+                noResultsMessage.classList.add('hidden');
+                return;
+            }
+
+            let matchCount = 0;
+            let matchedBlocks = [];
+
+            // Search in keynote talks and regular events
+            document.querySelectorAll('.time-block').forEach(block => {
+                const text = block.textContent.toLowerCase();
+                const hasMatch = text.includes(query);
+
+                if (hasMatch) {
+                    block.classList.remove('hidden');
+                    matchCount++;
+                    matchedBlocks.push(block);
+                    highlightText(block, query);
+                } else {
+                    block.classList.add('hidden');
+                }
+            });
+
+            // Search in session data
+            const sessionItems = document.querySelectorAll('.session-item');
+            sessionItems.forEach(item => {
+                const sessionCode = item.querySelector('.session-code').textContent.trim();
+                const session = sessionData[sessionCode];
+
+                if (!session) {
+                    item.classList.add('hidden');
+                    return;
+                }
+
+                let sessionMatch = false;
+
+                // Check session title, room, chair
+                const sessionText = `${session.title} ${session.room} ${session.chair}`.toLowerCase();
+                if (sessionText.includes(query)) {
+                    sessionMatch = true;
+                }
+
+                // Check talks
+                session.talks.forEach(talk => {
+                    const talkText = `${talk.title} ${talk.authors}`.toLowerCase();
+                    if (talkText.includes(query)) {
+                        sessionMatch = true;
+                    }
+                });
+
+                if (sessionMatch) {
+                    item.classList.remove('hidden');
+                    matchCount++;
+                    highlightText(item, query);
+
+                    // Show parent parallel-sessions container
+                    const parentContainer = item.closest('.parallel-sessions');
+                    if (parentContainer) {
+                        parentContainer.closest('.time-block').classList.remove('hidden');
+                    }
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+
+            // Hide empty time blocks (those with only hidden sessions)
+            document.querySelectorAll('.time-block').forEach(block => {
+                const parallelSessions = block.querySelector('.parallel-sessions');
+                if (parallelSessions) {
+                    const visibleSessions = parallelSessions.querySelectorAll('.session-item:not(.hidden)');
+                    if (visibleSessions.length === 0) {
+                        block.classList.add('hidden');
+                    }
+                }
+            });
+
+            // Hide day schedules with no visible content
+            document.querySelectorAll('.day-schedule').forEach(schedule => {
+                const visibleBlocks = schedule.querySelectorAll('.time-block:not(.hidden)');
+                if (visibleBlocks.length === 0) {
+                    schedule.classList.add('hidden');
+                } else {
+                    schedule.classList.remove('hidden');
+                }
+            });
+
+            // Update search results info
+            if (matchCount > 0) {
+                searchResultsInfo.textContent = `Found ${matchCount} result${matchCount !== 1 ? 's' : ''}`;
+                noResultsMessage.classList.add('hidden');
+            } else {
+                searchResultsInfo.textContent = '';
+                noResultsMessage.classList.remove('hidden');
+            }
+        }
+
+        function highlightText(element, query) {
+            const walker = document.createTreeWalker(
+                element,
+                NodeFilter.SHOW_TEXT,
+                null,
+                false
+            );
+
+            const nodesToReplace = [];
+            let node;
+
+            while (node = walker.nextNode()) {
+                if (node.textContent.toLowerCase().includes(query)) {
+                    nodesToReplace.push(node);
+                }
+            }
+
+            nodesToReplace.forEach(node => {
+                const text = node.textContent;
+                const lowerText = text.toLowerCase();
+                const index = lowerText.indexOf(query);
+
+                if (index !== -1) {
+                    const before = text.substring(0, index);
+                    const match = text.substring(index, index + query.length);
+                    const after = text.substring(index + query.length);
+
+                    const fragment = document.createDocumentFragment();
+
+                    if (before) fragment.appendChild(document.createTextNode(before));
+
+                    const highlight = document.createElement('span');
+                    highlight.className = 'highlight';
+                    highlight.textContent = match;
+                    fragment.appendChild(highlight);
+
+                    if (after) fragment.appendChild(document.createTextNode(after));
+
+                    node.parentNode.replaceChild(fragment, node);
+                }
+            });
+        }
+
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Show/hide scroll indicator
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollIndicator.style.display = 'flex';
+            } else {
+                scrollIndicator.style.display = 'none';
+            }
+        });
+
+        // Initial hide
+        scrollIndicator.style.display = 'none';
+    </script>
+</body>
+</html>
