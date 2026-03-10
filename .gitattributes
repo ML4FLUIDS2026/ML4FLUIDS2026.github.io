@@ -1,1 +1,2 @@
-*.pdf filter=lfs diff=lfs merge=lfs -text
+book-ml4fluids-en.pdf filter=lfs diff=lfs merge=lfs -text
+assets/book-ml4fluids-en.pdf filter=lfs diff=lfs merge=lfs -text
